@@ -1,0 +1,16 @@
+<launch>
+  <arg 
+  name="serial_number" 
+  default="242222071812"/>
+
+  <!-- See install instructions here: https://github.com/IntelRealSense/realsense-ros -->
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch" >
+    <param
+    name="serial_no"
+    value="$(arg serial_number)"/>
+  </include>
+
+  <!-- See install instructions here: https://github.com/ethz-asl/image_undistort -->
+  <include file="$(find image_undistort)/launch/undistort_realsense.launch" >
+  </include>
+</launch>
