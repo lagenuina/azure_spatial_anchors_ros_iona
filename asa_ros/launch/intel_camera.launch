@@ -8,6 +8,15 @@
     <param
     name="serial_no"
     value="$(arg serial_number)"/>
+
+    <param 
+    name="color_fps" 
+    default="15"/>
+
+    <param 
+    name="depth_fps" 
+    default="15"/>
+
   </include>
 
   <!-- See install instructions here: https://github.com/ethz-asl/image_undistort -->
